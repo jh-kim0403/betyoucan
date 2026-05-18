@@ -1,0 +1,57 @@
+{
+  "expo": {
+    "name": "BetYouCan",
+    "slug": "betyoucan",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "scheme": "betyoucan",
+    "ios": {
+      "bundleIdentifier": "com.jkapps.betyoucan",
+      "supportsTablet": false,
+      "infoPlist": {
+        "ITSAppUsesNonExemptEncryption": false
+      }
+    },
+    "android": {
+      "package": "com.jkapps.betyoucan",
+      "adaptiveIcon": {
+        "backgroundColor": "#1f1f1f"
+      },
+      "permissions": [
+        "android.permission.RECORD_AUDIO",
+        "android.permission.ACCESS_COARSE_LOCATION",
+        "android.permission.ACCESS_FINE_LOCATION"
+      ]
+    },
+    "plugins": [
+      "expo-secure-store",
+      [
+        "expo-image-picker",
+        {
+          "cameraPermission": "Allow BetYouCan to access your camera for photo verification."
+        }
+      ],
+      "expo-location",
+      [
+        "@react-native-google-signin/google-signin",
+        {
+          "iosUrlScheme": "com.googleusercontent.apps.549933599241-igrf4ntp88rbi7nengq2khsnhls7ln49"
+        }
+      ],
+      [
+        "@stripe/stripe-react-native",
+        {
+          "merchantIdentifier": "",
+          "enableGooglePay": false
+        }
+      ],
+      "@react-native-community/datetimepicker"
+    ],
+    "newArchEnabled": true,
+    "extra": {
+      "eas": {
+        "projectId": "b3aca40a-545d-4786-8216-d0db1095ca74"
+      }
+    }
+  }
+}
